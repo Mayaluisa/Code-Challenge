@@ -1,17 +1,35 @@
 /**
- * In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger.
-
-For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
-
-Your function will be tested with pre-made examples as well as random ones.
-
-If you can, try writing it in one line of code.
+ * This kata (challenge) is about multiplying a given number by eight if it is an even number and by nine otherwise.
  */
 
-function findDifference(arr1, arr2) {
-    let prod1 = arr1[0] * arr1[1] * arr1[2];
-    let prod2 = arr2[0] * arr2[1] * arr2[2];
-    
-    let finalProd = prod1 - prod2
-    return finalProd < 0 ? finalProd *= -1 : finalProd
+function simpleMultiplication(number) {
+    if(number % 2 === 0){
+     return number * 8
+    } else return number * 9
+  
+}
+
+/**
+ * A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+
+Return true if yes, false otherwise :)
+ */
+
+function hero(bullets, dragons){
+    if ((dragons *= 2) <= bullets) {
+      return true 
+    } else return false
+  }
+
+/**
+ * Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+For example, for [1, 2, 2] it should return 9 because 1 squared plus 2 squared plus 2 squared equals 9.
+*/
+
+function squareSum(numArr){
+    let res = 0;
+    for (let i = 0; i < numArr.length; i++){
+      res += numArr[i]**2
+    } return res
   }
