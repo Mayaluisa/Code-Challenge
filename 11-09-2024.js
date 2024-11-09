@@ -100,3 +100,21 @@ class Kata {
      return length*width*height
     }
   }
+
+/**
+ * Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+ */
+
+function evenOrOdd(number) {
+    if (number%2===0){
+      return "Even" 
+    } else return "Odd"
+   }
+
+/**
+ * Or...
+ */
+
+function evenOrOdd2(number){
+    return number  % 2 === 0 ? "Even" : "Odd"; 
+}
