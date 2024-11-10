@@ -118,3 +118,34 @@ function evenOrOdd(number) {
 function evenOrOdd2(number){
     return number  % 2 === 0 ? "Even" : "Odd"; 
 }
+
+/**
+ * An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+Example: (Input --> Output)
+
+"Dermatoglyphics" --> true
+"aba" --> false
+"moOse" --> false (ignore letter case)
+ */
+
+function isIsogram(str){
+    if (str === ''){
+      return true 
+    };
+    
+    let string = str.toLowerCase(); // make the string lowercase. 
+    
+    let obj = {}; // init an empty object
+    
+    for (let i = 0; i < string.length; i++){ // iterate over lowercased string 
+      if (!(string[i] in obj)){ // check for letter in obj
+        obj[string[i]] = 1 // if not present, add it 
+      } else if (string[i] in obj){ // if present, exit and return 
+        return false 
+      }
+    } 
+     return true 
+  }
+  
+  
