@@ -133,3 +133,15 @@ var min = function(list){
 function makeUpperCase(str) {
     return str.toUpperCase();
   }
+
+/**
+* Make a simple function called greet that returns the most-famous "hello world!".
+*/
+
+/**
+ * Trying out an anonymous function
+ */
+
+const greet = function () {
+    return "hello world!"
+  }
